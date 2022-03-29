@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@200&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+:root {
+    --txt-color: #fff;
+    --timer-box-bg: #1c2451;
+    --timer-box-txt-bg: #085391;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    color: var(--txt-color);
+    font-family: 'Poppins', sans-serif;
+    
+}
+input[type=submit]{
+    background-color: #085391;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+
+.content-wrapper {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.year {
+    font-size: 15rem;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer > * ~ * {
+    margin-left: 4rem;
+}
+
+.timer-box {
+    border-radius: 20px;
+    
+    background-color: var(--timer-box-bg);
+}
+
+.timer-box__count {
+    
+    --size: 10rem;
+    width: var(--size);
+    height: var(--size);
+    display: grid;
+    place-items: center;
+}
+
+.timer-box__count > span {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.timer-box__text {
+    border-radius: 10px;
+
+    display: grid;
+    place-items: center;
+    background-color: var(--timer-box-txt-bg);
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    html {
+        font-size: 40%;
+    }
+}

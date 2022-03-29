@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="./Media/HCM.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <iframe
+      src="./Media/music.mp3"
+      allow="autoplay"
+      id="audio"
+      style="display: none"
+    ></iframe>
+    <div class="content-wrapper">
+      <p class="header">Lunar New Year</p>
+      <h1 class="year" id="new-year">2023</h1>
+      <div class="timer">
+        <div class="timer-box">
+          <div class="timer-box__count">
+            <span id="days">0</span>
+          </div>
+          <div class="timer-box__text">Days</div>
+        </div>
+        <div class="timer-box">
+          <div class="timer-box__count">
+            <span id="hours">0</span>
+          </div>
+          <div class="timer-box__text">Hours</div>
+        </div>
+        <div class="timer-box">
+          <div class="timer-box__count">
+            <span id="minutes">0</span>
+          </div>
+          <div class="timer-box__text">Minutes</div>
+        </div>
+        <div class="timer-box">
+          <div class="timer-box__count">
+            <span id="seconds">0</span>
+          </div>
+          <div class="timer-box__text">Seconds</div>
+        </div>
+      </div>
+
+      <form action="../Fireworks/fireworks.html">
+        <input type="submit" value="FIREWORKS" />
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
