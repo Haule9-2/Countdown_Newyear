@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@200&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --txt-color: #fff;
+  --timer-box-bg: #1c2451;
+  --timer-box-txt-bg: #085391;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+ 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+  overflow: hidden;
+  color: var(--txt-color);
+  font-family: "Poppins", sans-serif;
+}
+/* Tittle */
+.title-word {
+  font-weight: 900;
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
+}
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #17494D;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+/* Here are just some visual styles. 🖌 */
+
+.container {
+  display: grid;
+  place-items: center;  
+  text-align: center;
+  height: 5vh
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 8.5vw;
+  text-transform: uppercase;
+}
+
+.content-wrapper {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 300;
+}
+.timer-box__count :hover{
+  color: #E2DE84;
+  cursor: pointer;
+}
+.year :hover{
+  color: #E2DE84;
+  cursor: pointer;
+}
+.year
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+  font-size: 200px;
+  line-height: 1.5;
+  font-weight: 900;
+
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer > * ~ * {
+  margin-left: 4rem;
+}
+
+.timer-box {
+  border-radius: 20px;
+
+  background-color: var(--timer-box-bg);
+}
+
+.timer-box__count {
+  --size: 10rem;
+  width: var(--size);
+  height: var(--size);
+  display: grid;
+  place-items: center;
+}
+
+.timer-box__count > span {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.timer-box__text {
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background-color: var(--timer-box-txt-bg);
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.flip {
+  position: absolute;
+  width: 200px;
+  height: 48px;
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+  -ms-perspective: 500px;
+  perspective: 500px;
+  top: 95%;
+  left: 50%;
+  margin: -24px 0 0 -80px;
+}
+.flip a {
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-25px);
+  -moz-transform: translateZ(-25px);
+  -o-transform: translateZ(-25px);
+  -ms-transform: translateZ(-25px);
+  transform: translateZ(-25px);
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  -ms-transition: -ms-transform 0.3s;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.flip a .front,
+.flip a .back {
+  margin: 0;
+  width: 160px;
+  height: 48px;
+  line-height: 48px;
+  position: absolute;
+  text-align: center;
+  letter-spacing: 0.4em;
+}
+.flip a .front {
+  background-color: #085391;
+  color: #fff;
+  -webkit-transform: rotateY(0) translateZ(24px);
+  -moz-transform: rotateY(0) translateZ(24px);
+  -o-transform: rotateY(0) translateZ(24px);
+  -ms-transform: rotateY(0) translateZ(24px);
+  transform: rotateY(0) translateZ(24px);
+  border-radius: 10px;
+
+}
+.flip a .back {
+  background-color: #085391;
+  color: rgba(34,34,34,0);
+  -webkit-transform: rotateX(90deg) translateZ(24px);
+  -moz-transform: rotateX(90deg) translateZ(24px);
+  -o-transform: rotateX(90deg) translateZ(24px);
+  -ms-transform: rotateX(90deg) translateZ(24px);
+  transform: rotateX(90deg) translateZ(24px);
+  overflow: hidden;
+  border-radius: 10px;
+
+}
+.flip a .back:after {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -10%;
+  width: 120%;
+  height: 50%;
+  background: #085391;
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+.flip a:hover {
+  -webkit-transform: translateZ(-24px) rotateX(-90deg);
+  -moz-transform: translateZ(-24px) rotateX(-90deg);
+  -o-transform: translateZ(-24px) rotateX(-90deg);
+  -ms-transform: translateZ(-24px) rotateX(-90deg);
+  transform: translateZ(-24px) rotateX(-90deg);
+}
+.flip a:hover .front {
+  background: #085391;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.flip a:hover .back {
+  color: #222;
+  -webkit-transition: color 0.4s linear;
+  -moz-transition: color 0.4s linear;
+  -o-transition: color 0.4s linear;
+  -ms-transition: color 0.4s linear;
+  transition: color 0.4s linear;
+  background: #fff;
+}
+.flip a:hover .back:after {
+  -webkit-transform: rotate(6deg) translate(100px, -18px);
+  -moz-transform: rotate(6deg) translate(100px, -18px);
+  -o-transform: rotate(6deg) translate(100px, -18px);
+  -ms-transform: rotate(6deg) translate(100px, -18px);
+  transform: rotate(6deg) translate(100px, -18px);
+}
